@@ -13,29 +13,16 @@ public class PageController {
 	public ModelAndView index() {
 		
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting","Welcome to Spring Web MVC");
-		mv.addObject("title", "Online Shopping");
+		mv.addObject("title", "Home");
+		mv.addObject("userClickHome", true);
 		return mv;
 		
 		
 	}
 	
-	/*
-	// funkcja ponizej napisana do celow testowych
-	// greeting to parametr zapytania html - w zaleznosci od jego wartosci zostanie wyswietlona inna zawartosc 
-	@RequestMapping(value = {"/test"}) // adres html: http://localhost:8080/onlineshopping/test  adres html: http://localhost:8080/onlineshopping/test?greeting=good morning
-	public ModelAndView test(@RequestParam(value = "greeting", required = false) String greeting) { // required = false - adres html nie musi koniecznie zawierac parametru greeting
-		
-		// jesli w adresie html nie podano parametru greeting
-		if(greeting == null) {
-			greeting = "Hello";
-		}
-		
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting",greeting);
-		return mv;
-	}
-	*/
+	
+	
+	
 	// funkcja testowa
 	// funkcja z parametrem dynamicznym
 	// greeting to parametr zapytania html - w zaleznosci od jego wartosci zostanie wyswietlona inna zawartosc 

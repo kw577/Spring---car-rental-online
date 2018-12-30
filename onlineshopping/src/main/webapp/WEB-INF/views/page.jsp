@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- spring tags - pozwala na korzystanie z dodatkowych funkcji zawartych w frameworku spring -->
-<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <spring:url var="css" value="/resources/css"/>
 <spring:url var="js" value="/resources/js"/>
@@ -30,69 +30,20 @@
 
 </head>
 <body>
-	
 	<div id="container">
 			
-
-		
-		<div id="topbar">
-			<div id="topbarL">
-				<img src="${images}/mainPage_image.png" class="imageLogo"/>
-			</div>
-			<div id="topbarR">
-				<!--<span> sluzy do grupowania elementow (np. tekstu, obrazkow) zazwyczaj w celu przypisania im okreslonego stylu CSS. W przciwienstwie do div nie uzywa sie ich do okreslania rozkladu elementow na stronie-->
-				<span class="bigtitle">We will find the best car for you !!! </span>
-				<div style="height: 15px;"></div> <!--div inline - w celu dodania linii odstepu-->
-				We rent cars, motorcycles, small busses and car's trailers. Always in good price.
-			</div>
-			<div style="clear:both;"></div> <!--div dodany zostal aby wyczyscic formtaowanie float: left; - rozmieszczenie szeregowe div'ow zawarte w div'ach topbarL i topbarR-->
-		</div>
-		
-		<div class="menu">
-		
-			
-				<div class="option">Main page</div>
-				<div class="option">Our offer</div>
-				<div class="option">About us</div>
-				<div class="option">Contact us</div>
-				<div class="option">Gallery</div>
-				
-				
-				<div style="clear:both;"></div> <!--div dodany zostal aby wyczyscic formtaowanie float: left; - rozmieszczenie szeregowe div'ow-->
-			
-			
-		</div>
+	<!-- Navigation - w tym miejscu jest wstawiony kod z pliku navbar.jsp -->
+	<%@include file="./shared/navbar.jsp"%>
 		
 		
-		
-		<div class="row">
-			<div id="sidebar">
-				<div class="optionL">Cars</div>
-				<div class="optionL">Motorcycles</div>
-				<div class="optionL">Busses</div>
-				<div class="optionL">Limousines</div>
-				<div class="optionL">Trailers</div>
-				
-			</div>
-			
-			<div id="content">
-				<span class="bigtitle">Car Rental Online</span>
-				
-				<br /><br />
-				
-				Here are our cars: 
-				
-				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-				
-				
-				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-				Pierwsza wersja.
-				
-			</div>	
-		</div>	
-		<div id="footer">
-			Projekt w ramach przedmiotu Programowanie Zaawansowane Java &copy; 
-		</div>
+	<!-- Glowna zawartosc strony -->	
+	<c:if test="${userClickHome == true }"> <!--  c: - funkcja z biblioteki jstl   - ta zawartosc strony jest ladowana gdy uzytkownik kliknie link do strony startowej -->
+		<!-- userClickHome - zmienna w klasie PageController.java -->
+		<%@include file="home.jsp"%>
+	</c:if>	
+	
+	<!-- Footer - w tym miejscu jest wstawiony kod z pliku footer.jsp -->
+	<%@include file="./shared/footer.jsp"%>
 	
 	</div>
 	
