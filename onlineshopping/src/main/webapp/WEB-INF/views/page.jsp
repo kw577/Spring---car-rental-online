@@ -42,6 +42,22 @@
 		<%@include file="home.jsp"%>
 	</c:if>	
 	
+	
+	
+	<c:if test="${userClickAbout == true }"> 
+		<!-- userClickAbout - zmienna w klasie PageController.java -->
+		<%@include file="about.jsp"%>
+	</c:if>
+
+
+	<c:if test="${userClickContact == true }"> 
+		<!-- userClickContact - zmienna w klasie PageController.java -->
+		<%@include file="contact.jsp"%>
+	</c:if>
+	
+	
+	
+	
 	<!-- Footer - w tym miejscu jest wstawiony kod z pliku footer.jsp -->
 	<%@include file="./shared/footer.jsp"%>
 	

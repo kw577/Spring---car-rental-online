@@ -21,6 +21,30 @@ public class PageController {
 	}
 	
 	
+	// funkcja uruchamia sie gdy na pasku nawigacji nacisnie sie przycisk "about" -
+		// przycisk ten jest odnosnikiem do adresu onlineshopping/about
+		@RequestMapping(value = { "about" })
+		public ModelAndView about() {
+
+			ModelAndView mv = new ModelAndView("page");
+			mv.addObject("title", "About Us");
+			mv.addObject("userClickAbout", true);
+			return mv;
+
+	}
+		
+		
+		// funkcja uruchamia sie gdy na pasku nawigacji nacisnie sie przycisk "Contact"
+		// - przycisk ten jest odnosnikiem do adresu onlineshopping/contact
+		@RequestMapping(value = { "contact" })
+		public ModelAndView contact() {
+			ModelAndView mv = new ModelAndView("page");
+			mv.addObject("title", "Contact Us");
+			mv.addObject("userClickContact", true);
+			return mv;
+
+		}
+	
 	
 	
 	// funkcja testowa

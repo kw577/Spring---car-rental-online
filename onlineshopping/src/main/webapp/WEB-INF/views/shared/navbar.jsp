@@ -3,21 +3,30 @@
 				<img src="${images}/mainPage_image.png" class="imageLogo"/>
 			</div>
 			<div id="topbarR">
-				<!--<span> sluzy do grupowania elementow (np. tekstu, obrazkow) zazwyczaj w celu przypisania im okreslonego stylu CSS. W przciwienstwie do div nie uzywa sie ich do okreslania rozkladu elementow na stronie-->
+				
 				<span class="bigtitle">We will find the best car for you !!! </span>
-				<div style="height: 15px;"></div> <!--div inline - w celu dodania linii odstepu-->
+				<div style="height: 15px;"></div> 
 				We rent cars, motorcycles, small busses and car's trailers. Always in good price.
 			</div>
-			<div style="clear:both;"></div> <!--div dodany zostal aby wyczyscic formtaowanie float: left; - rozmieszczenie szeregowe div'ow zawarte w div'ach topbarL i topbarR-->
+			<div style="clear:both;"></div> 
 		</div>
 		
 		<div class="menu">
-		
+					     
 			
-				<div class="option">Main page</div>
+				<a href="${contextRoot}/home" class="buttonlink">
+					<div class="option">Main Page</div>
+				</a>
 				<div class="option">Our offer</div>
-				<div class="option">About us</div>
-				<div class="option">Contact us</div>
+				
+				<a href="${contextRoot}/about" class="buttonlink">
+					<div class="option">About us</div>
+				</a>
+				
+				<a href="${contextRoot}/contact" class="buttonlink">
+					<div class="option">Contact us</div>
+				</a>
+				
 				<div class="option">Gallery</div>
 				
 				
