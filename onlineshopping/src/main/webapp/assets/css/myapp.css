@@ -1,0 +1,166 @@
+
+body
+{
+	background-color: #dedede; 
+	font-family: 'Lato', sans-serif; 
+	margin: 0 !important;
+}
+
+
+#container
+{
+	width: 100%;
+	margin-left: auto; 
+	margin-right: auto;
+	margin: 0px;
+}
+
+
+#topbar
+{
+	width:100%;
+	background-color: #356595;
+	color: white;
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	min-height: 120px;
+}
+
+#topbarL
+{
+	float:left; 
+	padding: 20px;
+	width: 138px; 
+	text-align: center;
+	
+}
+
+#topbarR
+{
+	float: left; 
+	padding: 20px;
+	font-size: 16px;
+	text-align: justify; 
+}
+
+
+
+.menu
+{
+	background-color: #1D3652; 
+	margin-top: 0px;
+	color: #ffffff; 
+	text-align: center;
+	
+}
+
+
+.row
+{
+	display: flex; /*dzieki temu wszystkie divy zawarte w div'ach klasy row maja zawsze ta sama wysokosc*/
+	
+}
+
+#sidebar
+{
+	float: left; 
+	width: 15%;
+	min-height: 520px;
+	padding:20px;
+	background-color: #75A2CE;
+	text-align: center; 
+	font-size: 18px;
+	border-right: 2px dotted #888888;
+}
+
+#content
+{
+	float: left; 
+	padding: 40px;
+	width: 85%;
+	background-color: #dedede;
+	min-height: 580px;
+	text-align: justify;
+}
+
+#footer
+{
+	clear: both; 
+	color: white;
+	text-align: center;
+	padding: 20px;
+	font-size: 18px;
+	background-color: #1D3652;
+}
+
+.option
+{
+	
+	min-width: 130px; 
+	height: 25px; 
+	font-size: 18px;
+	padding: 20px;
+	
+	
+	
+	opacity: 0.8; 
+	display: inline-block;
+}
+
+
+
+.option:hover
+{
+	background-color: #356595; 
+	cursor: pointer; 
+}
+
+.optionL
+{
+	font-size:18px;
+	height:25px;
+	padding: 10px;
+	border-bottom: 1px solid #444444;
+}
+
+.optionL:hover
+{
+	background-color: #356595;
+	color: white;
+	cursor: pointer; 
+}
+
+
+.bigtitle
+{
+	font-size: 32px;
+	font-weight: 900;
+	letter-spacing: 2px;
+}
+
+.dottedline
+{
+	height: 5px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	border-bottom: 2px dotted #444444;
+}
+
+
+.imageLogo
+{
+	width:150px;
+	height:75px;
+}
+
+
+
+.sticky
+{
+	width: 100%;
+	position: fixed; 
+	left: 0; 
+	top: 0; 
+	z-index: 100; 
+}
