@@ -1,4 +1,4 @@
-<div id="content">
+<div id="row">
 
 		<h1>About Us</h1>
 		<hr>
