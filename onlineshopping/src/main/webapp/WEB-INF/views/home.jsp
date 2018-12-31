@@ -1,11 +1,13 @@
 		<div class="row">
-			<div id="sidebar">
-				<div class="optionL">Cars</div>
-				<div class="optionL">Motorcycles</div>
-				<div class="optionL">Busses</div>
-				<div class="optionL">Limousines</div>
-				<div class="optionL">Trailers</div>
+			<div id="sidebar">			
 				
+				<c:forEach items="${categories}" var="category">
+					<a href="${contextRoot}/show/category/${category.id}/offer" class="buttonlink2">
+						<div class="optionL">${category.name}</div> 
+					</a>
+				</c:forEach>
+						
+							
 			</div>
 			
 			<div id="content">
@@ -19,12 +21,12 @@
 				
 				
 				
-					<!-- petla forEach z biblioteki jstl  - test polaczenie z projektem backendu -->
-					<c:forEach items="${categories}" var="category">
+				<!-- Load only when user clicks display products button -->
+				<c:if test="${userClickWholeOffer == true or userClickCategoryOffer == true}"> 
+					<%@include file="showOffer.jsp"%>
+				</c:if>
+
 				
-						<a href="#" class="list-group-item">${category.name}</a> 
-				
-					</c:forEach>
 				
 				
 				

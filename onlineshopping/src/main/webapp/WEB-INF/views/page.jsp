@@ -37,7 +37,7 @@
 		
 		
 	<!-- Glowna zawartosc strony -->	
-	<c:if test="${userClickHome == true }"> <!--  c: - funkcja z biblioteki jstl   - ta zawartosc strony jest ladowana gdy uzytkownik kliknie link do strony startowej -->
+	<c:if test="${userClickHome == true or userClickWholeOffer == true or userClickCategoryOffer == true}"> <!--  c: - funkcja z biblioteki jstl   - ta zawartosc strony jest ladowana gdy uzytkownik kliknie link do strony startowej -->
 		<!-- userClickHome - zmienna w klasie PageController.java -->
 		<%@include file="home.jsp"%>
 	</c:if>	

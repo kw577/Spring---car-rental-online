@@ -17,8 +17,11 @@
 				<a href="${contextRoot}/home" class="buttonlink">
 					<div class="option">Main Page</div>
 				</a>
-				<div class="option">Our offer</div>
 				
+				<a href="${contextRoot}/show/whole/offer" class="buttonlink">
+					<div class="option">Our offer</div>
+				</a>
+							
 				<a href="${contextRoot}/about" class="buttonlink">
 					<div class="option">About us</div>
 				</a>

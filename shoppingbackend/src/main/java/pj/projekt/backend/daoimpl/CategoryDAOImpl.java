@@ -75,5 +75,19 @@ public class CategoryDAOImpl implements CategoryDAO {
 		// TODO Auto-generated method stub
 		return categories;
 	}
+	
+	
+	@Override
+	public Category get(int id) {
+
+		// petla forEach
+		for(Category category : categories) {
+
+			if(category.getId() == id) return category;
+
+		}
+
+		return null;
+	}
 
 }

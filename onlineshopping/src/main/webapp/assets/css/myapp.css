@@ -162,6 +162,12 @@ a.buttonlink
 
 }
 
+a.buttonlink2
+{
+	color: black; 
+	text-decoration: none;  /*brak podkreslenia linka*/
+
+}
 
 
 .sticky

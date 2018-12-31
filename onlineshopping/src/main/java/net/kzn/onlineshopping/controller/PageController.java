@@ -7,11 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import pj.projekt.backend.dao.CategoryDAO;
+import pj.projekt.backend.dto.Category;
 
 @Controller
 public class PageController {
 
-	@Autowired // polaczenie z projektem Backendu - interface CategoryDAO znajduje sie w projekcie shoppingbackend
+	@Autowired // polaczenie z projektem Backendu 
 	private CategoryDAO categoryDAO;
 	
 	
@@ -54,29 +55,50 @@ public class PageController {
 			return mv;
 
 		}
-	
-	
-	
-	// funkcja testowa
-	// funkcja z parametrem dynamicznym
-	// greeting to parametr zapytania html - w zaleznosci od jego wartosci zostanie wyswietlona inna zawartosc 
-		@RequestMapping(value = {"/test/{greeting}"}) // adres html: http://localhost:8080/onlineshopping/test/trescPwitania
-		public ModelAndView test(@PathVariable("greeting") String greeting) { 
-			
-			// jesli w adresie html nie podano parametru greeting
-			if(greeting == null) {
-				greeting = "Hello";
-			}
-			
+		
+		
+		/*
+		 * Wyswietla wszystkie dostepne somochody do wynajecia
+		 */
+		@RequestMapping(value = { "show/whole/offer" }) 
+		public ModelAndView showAllProducts() {
+
 			ModelAndView mv = new ModelAndView("page");
-			mv.addObject("greeting",greeting);
+
+			mv.addObject("title", "Whole offer");
+
+			mv.addObject("categories", categoryDAO.list());	
+
+			mv.addObject("userClickWholeOffer", true);
 			return mv;
+
 		}
-	
-	
-	
-	
-	
-	
+
+
+		@RequestMapping(value = { "show/category/{id}/offer" }) 
+		public ModelAndView showCategoryProducts(@PathVariable("id") int id) {
+
+			ModelAndView mv = new ModelAndView("page");
+
+			// categoryDAO to fetch a single category
+			Category category = null;
+
+			category = categoryDAO.get(id);
+
+			mv.addObject("title", category.getName());
+
+			// lista kategorii
+			mv.addObject("categories", categoryDAO.list());	
+
+			// passing the single category object
+			mv.addObject("category", category);	
+
+			mv.addObject("userClickCategoryOffer", true);
+			return mv;
+
+		}
+
+
+		
 	
 }
