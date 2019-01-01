@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import pj.projekt.backend.dao.CategoryDAO;
+import pj.projekt.backend.dao.EquipmentDAO;
 import pj.projekt.backend.dto.Category;
 
 @Controller
@@ -15,6 +16,8 @@ public class PageController {
 	@Autowired // polaczenie z projektem Backendu 
 	private CategoryDAO categoryDAO;
 	
+	@Autowired // polaczenie z projektem Backendu 
+	private EquipmentDAO equipmentDAO;
 	
 	// funkcja zwracajaca ModelAndView - zawartosc strony 
 	@RequestMapping(value = {"/", "/home", "/index"}) // adres html np: http://localhost:8080/onlineshopping/home
@@ -68,7 +71,12 @@ public class PageController {
 			mv.addObject("title", "Whole offer");
 
 			mv.addObject("categories", categoryDAO.list());	
-
+			
+			// TEST
+			mv.addObject("cars", equipmentDAO.listActiveEquipment());	
+			///////
+			
+			
 			mv.addObject("userClickWholeOffer", true);
 			return mv;
 
