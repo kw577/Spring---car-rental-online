@@ -101,6 +101,9 @@ public class PageController {
 			// passing the single category object
 			mv.addObject("category", category);	
 
+			// TEST
+			//mv.addObject("cars", equipmentDAO.listActiveEquipmentByCategory(category.getId()));
+			
 			mv.addObject("userClickCategoryOffer", true);
 			return mv;
 

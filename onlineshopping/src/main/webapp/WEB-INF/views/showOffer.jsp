@@ -2,6 +2,27 @@ Here are our cars:
 				
 <br/><br/>
 
+<c:if test="${userClickWholeOffer == true }">
+	<script>
+		window.categoryId = '';
+	</script>
+</c:if>
+
+
+<c:if test="${userClickCategoryOffer == true }">
+	<script>
+	window.categoryId = '${category.id}';
+	</script>
+</c:if>
+
+
+
+
+
+
+
+
+
 <table id="table1">
   <tr>
   	<th></th>
@@ -20,7 +41,20 @@ Here are our cars:
 	
 <script>
 $( document ).ready(function() {
- $.getJSON("${contextRoot}/json/data/whole/offer", function(data){ 
+	
+	
+	var jsonUrl = '';
+	if(window.categoryId == '') { // uzytkownik chce wyswietlic wszystkie produkty - nie wybral kategorii
+		// zmienna pomocnicza categoryId utworzona w listProducts.jsp
+		jsonUrl = '/json/data/whole/offer';
+	}
+	else { // uzytkownik wybral kategorie dla ktorej chce wyswietlic wszystkie produkty
+		jsonUrl = '/json/data/category/'+ window.categoryId +'/equipment';
+	}
+	
+	
+	
+ $.getJSON("${contextRoot}"+jsonUrl, function(data){ 
      var equipment_data = '';
       $.each(data, function(key, value){
           equipment_data += '<tr>';
