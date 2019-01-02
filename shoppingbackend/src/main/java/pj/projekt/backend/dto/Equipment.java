@@ -19,16 +19,15 @@ public class Equipment {
 	
 	private String name;
 	
-	@JsonIgnore // pole decription bedzie pominiete przy generowaniu danych w formacie JSON
+	
 	private String brand;
 	
-	@JsonIgnore // pole decription bedzie pominiete przy generowaniu danych w formacie JSON
+	
 	private String description;
 	
 	@Column(name = "unit_price")
 	private double unitPrice;
 	
-	@JsonIgnore // pole decription bedzie pominiete przy generowaniu danych w formacie JSON
 	private int quantity;
 	
 	@Column(name = "is_active")

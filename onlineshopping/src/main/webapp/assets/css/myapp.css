@@ -178,3 +178,28 @@ a.buttonlink2
 	top: 0; 
 	z-index: 100; 
 }
+
+
+
+/*formatowanie tabeli z wynikami wyszukiwania*/
+
+table#table1 {
+  border-collapse: collapse;
+  width: 100%;
+ 
+}
+
+th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid black; 
+  color: #1D3652;
+}
+
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+tr:hover {background-color:#f5f5f5;}
