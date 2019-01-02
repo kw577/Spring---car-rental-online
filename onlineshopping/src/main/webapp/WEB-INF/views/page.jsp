@@ -73,6 +73,10 @@
 	<!--Dodanie biblioteki jquery-->
 	<script src="${js}/jquery-1.11.3.min.js"></script>
 
+	<!-- DataTable Plugin - jQuery - tabela do wyswietlania produktow -->
+	<script src="${js}/jquery.dataTables.js"></script>
+
+	
 
 	<!--ponizej skrypt powodujacy przyklejanie sie paska nawigacji do gornej czesci strony przy jej scrolowaniu-->
 	<script>

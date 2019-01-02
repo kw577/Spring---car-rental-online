@@ -1,13 +1,12 @@
 package pj.projekt.backend.dto;
 
-import java.util.UUID;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity // adnotacja oznacza ze klasa odpowiada tabeli w bazie danych
@@ -19,18 +18,25 @@ public class Equipment {
 	private int id;
 	
 	private String name;
+	
+	@JsonIgnore // pole decription bedzie pominiete przy generowaniu danych w formacie JSON
 	private String brand;
+	
+	@JsonIgnore // pole decription bedzie pominiete przy generowaniu danych w formacie JSON
 	private String description;
 	
 	@Column(name = "unit_price")
 	private double unitPrice;
 	
+	@JsonIgnore // pole decription bedzie pominiete przy generowaniu danych w formacie JSON
 	private int quantity;
 	
 	@Column(name = "is_active")
+	@JsonIgnore // pole decription bedzie pominiete przy generowaniu danych w formacie JSON
 	private boolean active;
 	
 	@Column(name = "category_id")
+	@JsonIgnore // pole decription bedzie pominiete przy generowaniu danych w formacie JSON
 	private int categoryId;
 	
 
