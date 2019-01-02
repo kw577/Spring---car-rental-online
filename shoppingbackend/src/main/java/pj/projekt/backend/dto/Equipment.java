@@ -22,7 +22,9 @@ public class Equipment {
 	
 	private String brand;
 	
-	
+	// przechowuje adres zdjecia
+	private String code;
+
 	private String description;
 	
 	@Column(name = "unit_price")
@@ -58,6 +60,14 @@ public class Equipment {
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}
+	
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
+	
 	public String getDescription() {
 		return description;
 	}

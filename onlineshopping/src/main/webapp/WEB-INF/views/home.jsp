@@ -15,9 +15,6 @@
 				
 				<br /><br />
 				
-				Here are our cars: 
-				
-				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 				
 				
 				
@@ -32,7 +29,7 @@
 				
 				
 				
-				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+				<br/><br/><br/><br/><br/><br/><br/><br/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 				Pierwsza wersja.
 				
 			</div>	
