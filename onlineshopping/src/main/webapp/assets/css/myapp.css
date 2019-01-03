@@ -223,3 +223,162 @@ tr:hover {background-color:#f5f5f5;}
 .iconTableImg:hover {
 	opacity: 1;
 }
+
+
+
+
+/* PODGLAD DOKLADNY OFERTY */
+
+.detailedView1
+{
+	
+	margin-left: 15%;
+	margin-right: 15%;
+	display: flex; 
+	text-align: center;
+	
+	margin-top:30px;
+}
+
+.detailedView2
+{
+	
+	margin-left: 15%;
+	margin-right: 15%;
+	display: flex; 
+	text-align: center;
+	margin-bottom:300px;
+}
+
+.detailedViewLeft
+{
+	float: left; 
+	width: 70%;
+	
+	padding:10px;
+	padding-top:20px;
+	text-align: center; 
+	font-size: 18px;
+	
+}
+
+.detailedViewRight
+{
+	
+
+	float: left; 
+	padding: 10px;
+	width: 30%;
+	
+
+	text-align: justify;
+}
+
+
+.detailedViewPhoto
+{
+	width:95%;
+	text-align: center;
+}
+
+
+
+
+
+
+
+.descripton
+{
+	float: left; 
+	width: 70%;
+	min-height: 120px;
+	padding:0px;
+	padding-top:20px;
+	text-align: center; 
+	font-size: 18px;
+	
+	text-align: justify;
+	line-height: 30px;
+	border-top: 2px solid #1D3652;
+	
+	
+}
+
+.actionButtons
+{
+	
+
+	float: left; 
+	padding: 10px;
+	width: 30%;
+	
+	text-align: center;
+
+}
+
+
+
+.backButton
+{
+	width:50%;
+	min-width: 70px;
+	padding: 12px;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+	background-color: #3232FF;
+	margin: 10px;
+
+	border-radius: 7px; 
+	font-weight: bold;
+	display: inline-block;
+}
+
+.orderButton
+{
+	width:50%;
+	min-width: 70px;
+	padding: 12px;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+	background-color: #00A000;
+	margin: 10px;
+	
+	border-radius: 7px; 
+	font-weight: bold;
+	display: inline-block;
+}
+
+.backButton:hover
+{
+	background-color: #4343FF; 
+	cursor: pointer; 
+}
+
+.orderButton:hover
+{
+	background-color: #00B400; 
+	cursor: pointer; 
+}
+
+.specificationTitle
+{
+	padding: 8px;
+	margin: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: 3px solid #444444;
+	
+}
+
+.specification
+{
+	padding: 8px;
+	margin: 5px;
+	font-size: 15px;
+	border-bottom: 1px solid #444444;
+	
+}

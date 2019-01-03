@@ -55,7 +55,11 @@
 		<%@include file="contact.jsp"%>
 	</c:if>
 	
-	
+	<!-- Gry uzytkownik wybierze przycisk podgladu pojedynczego produktu - informacja ta jest przekazywana w PageController.java poprzezz zmienna userClickShowProduct -->
+	<c:if
+		test="${userClickShowDetails == true}">
+		<%@include file="detailedOffer.jsp"%>
+	</c:if>
 	
 	
 	<!-- Footer - w tym miejscu jest wstawiony kod z pliku footer.jsp -->

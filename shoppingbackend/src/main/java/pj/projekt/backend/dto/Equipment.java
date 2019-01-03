@@ -40,6 +40,9 @@ public class Equipment {
 	@JsonIgnore // pole decription bedzie pominiete przy generowaniu danych w formacie JSON
 	private int categoryId;
 	
+	@JsonIgnore // pole decription bedzie pominiete przy generowaniu danych w formacie JSON
+	private String detailed_description;
+	
 
 	// setters and getters	
 	public int getId() {
@@ -97,6 +100,13 @@ public class Equipment {
 	}
 	public void setCategoryId(int categoryId) {
 		this.categoryId = categoryId;
+	}
+		
+	public String getDetailed_description() {
+		return detailed_description;
+	}
+	public void setDetailed_description(String detailed_description) {
+		this.detailed_description = detailed_description;
 	}
 	
 	// toString for debugging

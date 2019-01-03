@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 import pj.projekt.backend.dao.CategoryDAO;
 import pj.projekt.backend.dao.EquipmentDAO;
 import pj.projekt.backend.dto.Category;
+import pj.projekt.backend.dto.Equipment;
 
 @Controller
 public class PageController {
@@ -110,6 +111,32 @@ public class PageController {
 		}
 
 
+		
+		/*
+		 * Podglad informacji o pojedynczym urzadzeniu
+		 */
+		
+		@RequestMapping(value = "/view/id/{id}/equipment")
+		public ModelAndView showSingleProduct(@PathVariable int id) {
+			ModelAndView mv = new ModelAndView("page");
+			
+			Equipment equipment = null;
+			equipment = equipmentDAO.get(id);
+
+						
+			// zwieksza liczik wyswietlen 
+			//equipment.setViews(equipment.getViews() + 1); 
+			//equipmentDAO.update(equipment);
+			//-----------------------
+
+
+			mv.addObject("title", equipment.getName());
+			mv.addObject("equipment", equipment);
+
+			mv.addObject("userClickShowDetails", true); // zmienna pomocnicza wykorzystywana w pliku page.jsp do ustalenia jaa zawartosc strony ma byc wyswietlona
+
+			return mv;
+		}
 		
 	
 }
