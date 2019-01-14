@@ -11,21 +11,25 @@
 			</div>
 			
 			<div id="content">
-				<span class="bigtitle">Car Rental Online</span>
-				
-				<br /><br />
+
 				
 				
 				
 				
 				<!-- Load only when user clicks display products button -->
 				<c:if test="${userClickWholeOffer == true or userClickCategoryOffer == true}"> 
+					<span class="bigtitle">Car Rental Online</span>
+				
+					<br /><br />
 					<%@include file="showOffer.jsp"%>
 				</c:if>
 
 				
 				
-				
+				<!-- Load only when user clicks main page -->
+				<c:if test="${userClickHome == true}"> 
+					<%@include file="searchForm.jsp"%>
+				</c:if>
 				
 				
 				

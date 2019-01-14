@@ -28,6 +28,12 @@
     <!--Pobranie czcionki z google.fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
+	
+	<!--Biblioteka zaw. datapicker - mozna tez pobrac te pliki i dodac rel-->
+	<!--Mozliwe style do wyboru: base black-tie blitzer cupertino dark-hive dot-luv eggplant excite-bike flick hot-sneaks humanity le-frog mint-choc overcast pepper-grinder redmond smoothness south-street start sunny swanky-purse trontastic ui-darkness ui-lightness vader-->
+	
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css" type="text/css" />
+	
 </head>
 <body>
 	<div id="container">
@@ -107,7 +113,14 @@
 	
 	</script>
 	
-	
+		  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#depart" ).datepicker({dateFormat: 'yy-mm-dd'});
+    $( "#return" ).datepicker();
+  } );
+  </script>
 	
 	
 	

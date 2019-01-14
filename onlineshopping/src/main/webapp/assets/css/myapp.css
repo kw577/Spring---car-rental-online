@@ -382,3 +382,128 @@ tr:hover {background-color:#f5f5f5;}
 	border-bottom: 1px solid #444444;
 	
 }
+
+
+
+
+/*Formatowanie formularza wyszukiwania*/
+#formularz
+{
+	background-color: white;
+	
+	
+	width: 65%;
+	
+	
+	
+	
+	padding: 60px;
+	margin-left: auto; /*wysrodkowanie formularza*/
+	margin-right: auto;
+	margin-top: 50px;
+
+	text-align: center;
+	
+	
+	
+	
+}
+
+
+
+
+
+
+form {
+	
+	display: inline-block;
+	
+}
+
+
+input[type=text]
+{
+	width: 300px;
+	background-color: #efefef;
+	color: #888;
+	border: 2px solid #ddd;
+	border-radius: 5px; /*promien zagiecia obramowania*/
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box; /*szerokosc pola formularza stala - nie zalezna od rozmiaru zawartosci*/
+	outline: none; /*jest to obramowanie oznaczjace aktywne pole formularza - tzn to pole w ktore aktualnie cos jest wpisywane   - tu wylaczamy domyslny outline*/
+
+}
+	
+	
+input[type=text]:focus
+{
+
+	border: 2px solid #5EBAE9; /*obramowanie*/
+	background-color: #DFEEF7; /*kolor tla*/
+	color: #356595;/*kolor wpisywanego tekstu*/
+}	
+	
+	
+	
+input[type=submit]
+{
+	width: 300px;
+	background-color: #00874D;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+
+	margin-top: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer; /*po najechaniu kursorem na przycisk zmienia sie jego wyglad*/
+	letter-spacing: 2px; /*odstep miedzy literami*/
+	outline: none; /*jest to obramowanie oznaczjace aktywne pole formularza - tzn to pole w ktore aktualnie cos jest wpisywane   - tu wylaczamy domyslny outline*/
+	
+}
+
+/*efekty po najechaniu kursorem na przycisk submit*/
+input[type=submit]:hover
+{
+	background-color: #006E3E;
+}
+
+
+	
+
+
+select
+{
+	
+	width: 300px;
+	background-color: #F5F5F5;
+	color: #888;
+	border: 2px solid #ddd;
+	border-radius: 5px; /*promien zagiecia obramowania*/
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box; /*szerokosc pola formularza stala - nie zalezna od rozmiaru zawartosci*/
+	outline: none; /*jest to obramowanie oznaczjace aktywne pole formularza - tzn to pole w ktore aktualnie cos jest wpisywane   - tu wylaczamy domyslny outline*/
+	
+
+	
+}
+
+select:focus
+{
+
+	border: 2px solid #5EBAE9; /*obramowanie*/
+	background-color: #DFEEF7; /*kolor tla*/
+	color: #356595;/*kolor wpisywanego tekstu*/
+}	
+
+.formularzOpis{
+	display: inline-block;
+	width:300px;
+	text-align: left;
+	margin: 10px;
+	
+	
+}
+
