@@ -118,7 +118,7 @@
   <script>
   $( function() {
     $( "#depart" ).datepicker({dateFormat: 'yy-mm-dd'});
-    $( "#return" ).datepicker();
+    $( "#return" ).datepicker({dateFormat: 'yy-mm-dd'});
   } );
   </script>
 	

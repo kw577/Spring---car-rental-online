@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import pj.projekt.backend.dao.CategoryDAO;
@@ -111,6 +112,47 @@ public class PageController {
 		}
 
 
+		/*
+		 * Wyswietla oferte wg podanych kryteriow wyszukiwania
+		 */
+		@RequestMapping(value = { "offer/criteria/search" }) 
+		public ModelAndView showAllProductsWithCriteria(
+				@RequestParam("rentStart") String rentStart,
+				@RequestParam("rentEnd") String rentEnd,
+				@RequestParam("category") String category,
+				@RequestParam("maxPrice") Integer maxPrice) {
+
+		
+			
+			System.out.println("\n\n\n\n\n################################");
+			
+			System.out.println("\n rent start: " + rentStart);
+			System.out.println("\n rent end: " + rentEnd);
+			System.out.println("\n category: " + category);
+			System.out.println("\n maxPrice: " + maxPrice);
+			
+			System.out.println("\n\n\n\n\n################################");
+			
+			
+			
+			ModelAndView mv = new ModelAndView("page");
+
+			mv.addObject("title", "Whole offer");
+
+			mv.addObject("categories", categoryDAO.list());	
+			
+			// TEST
+			mv.addObject("cars", equipmentDAO.listActiveEquipment());	
+			///////
+			
+			
+			mv.addObject("userClickWholeOffer", true);
+			return mv;
+
+		}
+
+		
+		
 		
 		/*
 		 * Podglad informacji o pojedynczym urzadzeniu
