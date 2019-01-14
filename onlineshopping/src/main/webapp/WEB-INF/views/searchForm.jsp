@@ -25,10 +25,11 @@
 						What do you want to rent:
 						<select id="vehicle" name="category" path="category">
 							<option selected hidden style='display: none' value='1'></option>
-							<option value="1" >Samochód osobowy</option>
-							<option value="2">Motocykl</option>
-							<option value="3">Samochód rodzinny</option>
+							<c:forEach items="${categories}" var="category">
+								<option value="${category.id}" >${category.name}</option>
+							</c:forEach>
 						</select>
+							
 						
 						
 						</div>
@@ -36,7 +37,7 @@
 						Enter max price daily:
 					
 						
-						<input type="number" id="cena" name="maxPrice" value="${param.maxPrice}" placeholder="Max price/day">
+						<input type="number" id="cena" name="maxPrice" value="${param.maxPrice}" placeholder="Max price/day" min="0">
 						</div>
 
 						<br /><br />
