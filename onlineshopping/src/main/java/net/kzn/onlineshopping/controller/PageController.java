@@ -119,10 +119,14 @@ public class PageController {
 		public ModelAndView showAllProductsWithCriteria(
 				@RequestParam("rentStart") String rentStart,
 				@RequestParam("rentEnd") String rentEnd,
-				@RequestParam("category") String category,
-				@RequestParam("maxPrice") Integer maxPrice) {
+				@RequestParam("category") Integer category,
+				@RequestParam("maxPrice") Double maxPrice) {
 
-		
+			
+			String searchCriteria;
+			searchCriteria = "?rentStart=" + rentStart + "&rentEnd=" + rentEnd + "&category=" + category;
+			if(maxPrice == null) searchCriteria += "&maxPrice=";
+			else searchCriteria += "&maxPrice=" + maxPrice;
 			
 			System.out.println("\n\n\n\n\n################################");
 			
@@ -131,22 +135,22 @@ public class PageController {
 			System.out.println("\n category: " + category);
 			System.out.println("\n maxPrice: " + maxPrice);
 			
+			System.out.println("\n searchCriteria: " + searchCriteria);
+			
+			
 			System.out.println("\n\n\n\n\n################################");
 			
 			
 			
 			ModelAndView mv = new ModelAndView("page");
 
-			mv.addObject("title", "Whole offer");
+			mv.addObject("title", "User criteria offer");
 
 			mv.addObject("categories", categoryDAO.list());	
 			
-			// TEST
-			mv.addObject("cars", equipmentDAO.listActiveEquipment());	
-			///////
+			mv.addObject("searchingCriteria", searchCriteria);
 			
-			
-			mv.addObject("userClickWholeOffer", true);
+			mv.addObject("userClickUserCriteriaOffer", true);
 			return mv;
 
 		}

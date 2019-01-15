@@ -127,6 +127,57 @@ public class EquipmentDAOImpl implements EquipmentDAO {
 							.getResultList();
 	}
 
+	
+	
+	
+	@Override
+	public List<Equipment> listActiveEquipmentWithSearchCriteria(String rentStart, String rentEnd, Integer categoryId, Double maxPrice) {
+		
+		if (maxPrice == null) 
+		{
+			maxPrice = 999999999.0;
+		};
+		
+		String selectActiveEquipmentByCategory;
+		
+		if(categoryId == 0) {
+			selectActiveEquipmentByCategory = "FROM Equipment WHERE active = :active AND unitPrice <= :maxPrice";
+			return sessionFactory
+					.getCurrentSession()
+						.createQuery(selectActiveEquipmentByCategory,Equipment.class)
+							.setParameter("active", true)
+							.setParameter("maxPrice", maxPrice)
+								.getResultList();
+		}
+		else 
+			{
+			selectActiveEquipmentByCategory = "FROM Equipment WHERE active = :active AND categoryId = :categoryId AND unitPrice <= :maxPrice";
+			
+		
+		
+		
+			// "FROM Equipment WHERE active .... "" - Equipment to nazwa klasy 
+			return sessionFactory
+					.getCurrentSession()
+						.createQuery(selectActiveEquipmentByCategory,Equipment.class)
+							.setParameter("active", true)
+							.setParameter("maxPrice", maxPrice)
+							.setParameter("categoryId", categoryId)
+								.getResultList();
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@Override
 	public List<Equipment> getLatestActiveEquipment(int count) {
 		return sessionFactory

@@ -24,7 +24,7 @@
 						<div class="formularzOpis">
 						What do you want to rent:
 						<select id="vehicle" name="category" path="category">
-							<option selected hidden style='display: none' value='1'></option>
+							<option selected hidden style='display: none' value='0'></option>
 							<c:forEach items="${categories}" var="category">
 								<option value="${category.id}" >${category.name}</option>
 							</c:forEach>

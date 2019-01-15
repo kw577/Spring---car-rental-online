@@ -26,10 +26,23 @@
 
 				
 				
+				
+				<!-- Load only when user clicks main page -->
+				<c:if test="${userClickUserCriteriaOffer == true}"> 
+					<%@include file="userCriteriaOffer.jsp"%>
+				</c:if>
+				
+				
+				
+				
 				<!-- Load only when user clicks main page -->
 				<c:if test="${userClickHome == true}"> 
 					<%@include file="searchForm.jsp"%>
 				</c:if>
+				
+				
+				
+				
 				
 				
 				
