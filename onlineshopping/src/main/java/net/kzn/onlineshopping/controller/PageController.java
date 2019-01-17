@@ -184,5 +184,29 @@ public class PageController {
 			return mv;
 		}
 		
+		
+		/*
+		 * Strona rezerwacji
+		 */
+		
+		@RequestMapping(value = "/cart/add/id/{id}/equipment")
+		public ModelAndView reservationEquipment(@PathVariable int id) {
+			ModelAndView mv = new ModelAndView("page");
+			
+			Equipment equipment = null;
+			equipment = equipmentDAO.get(id);
+
+			mv.addObject("title", equipment.getName());
+			mv.addObject("equipment", equipment);
+
+			mv.addObject("userClickEquipmentReservation", true); // zmienna pomocnicza wykorzystywana w pliku page.jsp do ustalenia jaa zawartosc strony ma byc wyswietlona
+
+			return mv;
+		}
+		
+		
+		
+		
+		
 	
 }

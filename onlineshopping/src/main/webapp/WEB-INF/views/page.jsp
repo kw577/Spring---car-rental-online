@@ -67,6 +67,12 @@
 		<%@include file="detailedOffer.jsp"%>
 	</c:if>
 	
+	<!-- Formularz rezerwacji -->
+	<c:if
+		test="${userClickEquipmentReservation == true}">
+		<%@include file="equipmentReservation.jsp"%>
+	</c:if>
+	
 	
 	<!-- Footer - w tym miejscu jest wstawiony kod z pliku footer.jsp -->
 	<%@include file="./shared/footer.jsp"%>
@@ -119,6 +125,8 @@
   $( function() {
     $( "#depart" ).datepicker({dateFormat: 'yy-mm-dd'});
     $( "#return" ).datepicker({dateFormat: 'yy-mm-dd'});
+    $( "#rentStart" ).datepicker({dateFormat: 'yy-mm-dd'});
+    $( "#rentEnd" ).datepicker({dateFormat: 'yy-mm-dd'});
   } );
   </script>
 	

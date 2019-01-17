@@ -509,3 +509,129 @@ select:focus
 	
 }
 
+
+
+
+
+/*Formatowanie strony skladania zamowienia*/
+
+
+.summary
+{
+	background-color: white;
+
+	margin-left: 25%;
+	margin-right: 25%;	
+	min-width: 670px;
+	display: flex; 
+	text-align: center;
+	
+	margin-top:50px;
+	border-bottom: 3px solid #1D3652;
+}
+
+
+
+
+.summaryLeft
+{
+	float: left; 
+	width: 70%;
+	
+	padding:10px;
+	padding-top:20px;
+	text-align: center; 
+	font-size: 18px;
+	
+}
+
+.summaryRight
+{
+	
+
+	float: left; 
+	padding-top: 10px;
+	padding-right: 20px;
+	width: 30%;
+	
+
+	text-align: justify;
+}
+
+.reservationForm
+{
+	background-color: white;
+	margin-left: 25%;
+	margin-right: 25%;
+	min-width: 650px;
+	
+	display: flex; 
+	text-align: center;
+
+	padding: 10px;
+	padding-top: 20px;
+	margin-bottom: 150px;
+}
+
+.reservationFormButtons
+{
+	background-color: white;
+	margin-left: 25%;
+	margin-right: 25%;
+	min-width: 670px;
+	display: flex; 
+	text-align: center;
+	margin-bottom: 100px;
+	
+}
+
+
+.reservationFormInput
+{
+	margin-bottom: 25px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: inline-block;
+	text-align: left;
+	
+	
+}
+
+
+	
+.cancelButton
+{
+	width: 280px;
+	background-color: #DC4632;
+	font-size:20px;
+	color: white;
+	text-align: center;
+	padding: 15px 10px;
+	
+	margin-top: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer; 
+	letter-spacing: 2px; 
+	
+	text-decoration: none;
+	display: block;
+}
+
+
+
+.cancelButton:hover
+{
+	background-color: #DC2C00; 
+	cursor: pointer; 
+}
+
+
+.row2
+{
+	width:100%;
+		margin-left: auto; 
+	margin-right: auto;
+	text-align: center;
+	
+}
