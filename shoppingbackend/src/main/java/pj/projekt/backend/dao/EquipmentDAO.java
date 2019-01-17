@@ -17,5 +17,5 @@ public interface EquipmentDAO {
 	List<Equipment> listActiveEquipment();
 	List<Equipment> listActiveEquipmentByCategory(int categoryId);
 	List<Equipment> getLatestActiveEquipment(int count);
-	List<Equipment> listActiveEquipmentWithSearchCriteria(String rentStart, String rentEnd, Integer category, Double maxPrice);
+	List<Equipment> listActiveEquipmentWithSearchCriteria(List<Integer> rentedEquipment, Integer category, Double maxPrice);
 }

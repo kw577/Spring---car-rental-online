@@ -1,5 +1,6 @@
 package net.kzn.onlineshopping.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,18 +9,23 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import pj.projekt.backend.dao.EquipmentDAO;
+import pj.projekt.backend.dao.ReservationDAO;
 import pj.projekt.backend.dto.Equipment;
+import pj.projekt.backend.dto.Reservation;
 
 @Controller 
 @RequestMapping("json/data")  // Dotyczy wszystkich metod zawartych w tej klasie
 public class JsonDataController {
 
-	@Autowired // wstrzykiwanie beanu - klasy ProductDAOImpl  
+	@Autowired    
 	private EquipmentDAO equipmentDAO;
 
+	@Autowired   
+	private ReservationDAO reservationDAO;
+	
+	
 	@RequestMapping("/whole/offer")  // adresy typu:  http://localhost:8080/onlineshopping/json/data/all/products 
 	@ResponseBody // Spring stara sie przeksztalcic zwrocone wartosci w odpowiedz http (np. konwertujac obiekt na format JSON lub XML)
 	public List<Equipment> getAllEquipment(){
@@ -49,8 +55,33 @@ public class JsonDataController {
 			@RequestParam("maxPrice") Double maxPrice) {
 
 	
+		
+		///////////////////////////////////
+		
+		List<Integer> rentedEquipment = new ArrayList<Integer>();
+		rentedEquipment.add(0);
+		
+		
+		if(rentStart != "" || rentEnd != "") {
+			List<Reservation> temp = reservationDAO.listReservationByDate(rentStart,rentEnd);
+			
+			for (Reservation item : temp) {
+				rentedEquipment.add(item.getEquipment_id());
+			    
+			}
+		}
+		
+		
+		
+		System.out.println("\n\n\n\n\n\n### Json Data Controller - lista zajetych samochodow");
+		System.out.println(rentedEquipment);
+		
+		
+		////////////////////////////////////////
+		
+		
 		//return equipmentDAO.listActiveEquipmentByCategory(id);
-		return equipmentDAO.listActiveEquipmentWithSearchCriteria(rentStart, rentEnd, category, maxPrice);
+		return equipmentDAO.listActiveEquipmentWithSearchCriteria(rentedEquipment, category, maxPrice);
 
 	}
 	

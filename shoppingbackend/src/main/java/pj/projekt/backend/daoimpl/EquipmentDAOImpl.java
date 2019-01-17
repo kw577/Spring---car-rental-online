@@ -131,7 +131,7 @@ public class EquipmentDAOImpl implements EquipmentDAO {
 	
 	
 	@Override
-	public List<Equipment> listActiveEquipmentWithSearchCriteria(String rentStart, String rentEnd, Integer categoryId, Double maxPrice) {
+	public List<Equipment> listActiveEquipmentWithSearchCriteria(List<Integer> rentedEquipment, Integer categoryId, Double maxPrice) {
 		
 		if (maxPrice == null) 
 		{
@@ -141,17 +141,18 @@ public class EquipmentDAOImpl implements EquipmentDAO {
 		String selectActiveEquipmentByCategory;
 		
 		if(categoryId == 0) {
-			selectActiveEquipmentByCategory = "FROM Equipment WHERE active = :active AND unitPrice <= :maxPrice";
+			selectActiveEquipmentByCategory = "FROM Equipment WHERE id not in :rentedEquipment AND active = :active AND unitPrice <= :maxPrice";
 			return sessionFactory
 					.getCurrentSession()
 						.createQuery(selectActiveEquipmentByCategory,Equipment.class)
+							.setParameter("rentedEquipment", rentedEquipment)
 							.setParameter("active", true)
 							.setParameter("maxPrice", maxPrice)
 								.getResultList();
 		}
 		else 
 			{
-			selectActiveEquipmentByCategory = "FROM Equipment WHERE active = :active AND categoryId = :categoryId AND unitPrice <= :maxPrice";
+			selectActiveEquipmentByCategory = "FROM Equipment WHERE id not in :rentedEquipment AND active = :active AND categoryId = :categoryId AND unitPrice <= :maxPrice";
 			
 		
 		
@@ -160,6 +161,7 @@ public class EquipmentDAOImpl implements EquipmentDAO {
 			return sessionFactory
 					.getCurrentSession()
 						.createQuery(selectActiveEquipmentByCategory,Equipment.class)
+							.setParameter("rentedEquipment", rentedEquipment)
 							.setParameter("active", true)
 							.setParameter("maxPrice", maxPrice)
 							.setParameter("categoryId", categoryId)
