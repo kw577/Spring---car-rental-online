@@ -1,0 +1,30 @@
+INSERT INTO category (name, description, image_url, is_active) VALUES ('Cars', 'Here are our cars', 'category_1.png', true);
+INSERT INTO category (name, description, image_url, is_active) VALUES ('Motorcycles', 'Here are our motorcycles', 'category_2.png', true);
+INSERT INTO category (name, description, image_url, is_active) VALUES ('Busses', 'Here are our busses', 'category_3.png', true);
+INSERT INTO category (name, description, image_url, is_active) VALUES ('Limousines', 'Here are our limousines', 'category_4.png', true);
+INSERT INTO category (name, description, image_url, is_active) VALUES ('Trailers', 'Here are our trailers', 'category_5.png', true);
+INSERT INTO category (name, description, image_url, is_active) VALUES ('Test', 'Test category', 'category_6.png', false);
+
+
+
+INSERT INTO equipment (name, brand, code, description, unit_price, quantity, is_active, category_id, detailed_description)
+VALUES ('Audi A6', 'Audi', 'AudiA6_Photo', 'This is one of the most popular of our cars', 200, 3, true, 1, 'Engine size: 1.0 litres, Horsepower (BHP) 115, Acceleration (0-60mph) 10.0s, Fuel economy 60mpg, Anti-lock brake system, Driver and passenger airbags, Driver and passenger side airbags, Head airbags, ESP including MBA, MSR, ASR, EDL, HBA, Dual zone automatic air conditioning with humidity sensor and control.');
+
+INSERT INTO equipment (name, brand, code, description, unit_price, quantity, is_active, category_id, detailed_description)
+VALUES ('Octavia', 'Skoda', 'SkodaOctavia_Photo', 'Very popular family car', 220, 2, true, 1, 'Engine size: 1.0 litres, Horsepower (BHP) 150, Acceleration (0-60mph) 8.0s, Fuel economy 70mpg, Anti-lock brake system, Driver and passenger airbags, Driver and passenger side airbags, Head airbags, ESP including MBA, MSR, ASR, EDL, HBA, Dual zone automatic air conditioning with humidity sensor and control.');
+
+INSERT INTO equipment (name, brand, code, description, unit_price, quantity, is_active, category_id, detailed_description)
+VALUES ('Yamaha Fazer', 'Yamaha', 'YamahaFazer_Photo', 'Perfect for the road as well as the city.', 140, 5, true, 2, 'Engine Displ.: 149 cc, Power: 13.2 PS 8000 rpm, Mileage: 45 Kmpl, Gear Box: 5 Speed, Fuel System: Fuel Injection ABS: no, Head Lamp: Halogen, Wheels Type: Alloy, Tyre Type: Tubeless, Dual LED Auxiliary Lights, Oil Cooling to Avoid Engine Overheating, Feature Loaded Console, 14L Fuel Tank, Wide and Comfortable Seat.');
+
+INSERT INTO equipment (name, brand, code, description, unit_price, quantity, is_active, category_id, detailed_description) VALUES ('Suzuki Intruder', 'Suzuki', 'SuzukiIntruder_Photo', 'Great choice if you want to go outside the city', 210, 1, true, 2, 'Engine type: Water-cooled 4-stroke, Cylinder arrangement: V-twin, Compression ratio: 10.0:1, Valve train: Chain driven SOHC, 4 valves per cylinder, Top speed: 165 km/h (102 mph), Transmission: 5-speed, 15-inch aluminum wheel, 140/90 HR15 tire drum brakes, two shock absorbers and twin-sided swing arm suspension.');
+
+INSERT INTO equipment (name, brand, code, description, unit_price, quantity, is_active, category_id, detailed_description) VALUES ('Mercedes S500L', 'Mercedes', 'Mercedes_S500L_Photo', 'This is our most luxurious limousine.', 500, 1, true, 4, 'Engine type: Water-cooled 4-stroke, Cylinder arrangement: V-twin, Compression ratio: 10.0:1, Valve train: Chain driven SOHC, 4 valves per cylinder, Top speed: 165 km/h (102 mph), Transmission: 5-speed, 15-inch aluminum wheel, 140/90 HR15 tire drum brakes, two shock absorbers and twin-sided swing arm suspension.');
+
+
+INSERT INTO reservation (equipment_id, user_name, user_surname, user_email, user_phone, total_price, reservation_start, reservation_end) VALUES (1, 'Jan', 'Kowalski', 'jankowalski@email.com', '111111111', 2000, '2019-01-20 10:00:00', '2019-01-29 11:30:00');
+
+INSERT INTO reservation (equipment_id, user_name, user_surname, user_email, user_phone, total_price, reservation_start, reservation_end) VALUES (2, 'Jan', 'Kowalski', 'jankowalski@email.com', '111111111', 1800, '2019-02-15 10:00:00', '2019-02-20 11:30:00');
+
+INSERT INTO reservation (equipment_id, user_name, user_surname, user_email, user_phone, total_price, reservation_start, reservation_end) VALUES (1, 'Marek', 'Nowak', 'mareknowak@email.com', '222222222', 1400, '2019-02-02 11:00:00', '2019-02-08 17:00:00');
+
+INSERT INTO reservation (equipment_id, user_name, user_surname, user_email, user_phone, total_price, reservation_start, reservation_end) VALUES (3, 'Anna', 'Nowacka', 'annanowacka@email.com', '333333333', 1500, '2019-03-01 11:00:00', '2019-03-08 17:00:00');

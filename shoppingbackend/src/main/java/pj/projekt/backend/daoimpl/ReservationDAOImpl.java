@@ -86,7 +86,24 @@ public class ReservationDAOImpl implements ReservationDAO {
 	}
 
 	
-	
+	@Override
+	public boolean add(Reservation reservation) {
+		
+		
+		
+		
+		
+		try {			
+			sessionFactory
+					.getCurrentSession()
+						.persist(reservation);
+			return true;
+		}
+		catch(Exception ex) {		
+			ex.printStackTrace();			
+		}		
+		return false;
+	}
 
 	
 }

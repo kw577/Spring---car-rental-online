@@ -1,3 +1,5 @@
+<%@taglib prefix="sform" uri="http://www.springframework.org/tags/form" %>
+
 	<div class="row2">
 	
 			<div class="summary">
@@ -21,45 +23,49 @@
 			
 			<div class="reservationForm">
 							
-				<form action="" method="post">
+				<sform:form modelAttribute="reservation">
 					<div class="reservationFormInput">		
 						Pick-up date:
 						</br>
-						<input type="text" id="rentStart" placeholder="Rent start">		
+						<sform:input type="text" id="rentStart" path="reservation_start" placeholder="Rent start"/>					
 					</div>
 					
 				
 					<div class="reservationFormInput">
 						Drop-off date:
-						</br>
-						<input type="text" id="rentEnd" placeholder="Rent end">		
+						</br>		
+						<sform:input type="text" id="rentEnd" path="reservation_end" placeholder="Rent end"/>					
 					</div>
 					
 					<div class="reservationFormInput">
 						Enter your name:
 						</br>
-						<input type="text" id="userName" placeholder="Your name">		
+						<sform:input type="text" id="userName" path="user_name" placeholder="Your name"/>						
 					</div>					
 							
 					<div class="reservationFormInput">
 						Enter your surname:
-						</br>
-						<input type="text" id="userSurname" placeholder="Your surname">		
+						</br>	
+						<sform:input type="text" id="userSurname" path="user_surname" placeholder="Your surname"/>						
 					</div>	
 					
 					<div class="reservationFormInput">
 						Your e-mail address:
-						</br>
-						<input type="text" id="userEmail" placeholder="Address e-mail">		
+						</br>	
+						<sform:input type="text" id="userEmail" path="user_email" placeholder="Your email"/>						
 					</div>	
 							
 					<div class="reservationFormInput">
 						Your phone number:
-						</br>
-						<input type="text" id="userEmail" placeholder="Phone number">		
+						</br>	
+						<sform:input type="text" id="userPhone" path="user_phone" placeholder="Your phone"/>						
+					
 					</div>	
 					<div class="reservationFormInput">
 						<input type="submit" value="Reservation">
+						<sform:hidden path="id"/>
+						<sform:hidden path="equipment_id"/>
+						<sform:hidden path="total_price"/>
 					</div>
 					<div class="reservationFormInput">
 						
@@ -68,7 +74,7 @@
 					</div>
 					
 					<div style="clear:both;"></div>
-				</form>
+				</sform:form>
 					
 			</div>	
 		
